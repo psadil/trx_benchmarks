@@ -1,0 +1,1336 @@
+{
+    "machine_info": {
+        "node": "psadil-mb.lan",
+        "processor": "arm",
+        "machine": "arm64",
+        "python_compiler": "Clang 16.0.6 ",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.12.3",
+        "python_version": "3.12.3",
+        "python_build": [
+            "main",
+            "Apr 15 2024 18:35:20"
+        ],
+        "release": "23.4.0",
+        "system": "Darwin",
+        "cpu": {
+            "python_version": "3.12.3.final.0 (64 bit)",
+            "cpuinfo_version": [
+                9,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "9.0.0",
+            "arch": "ARM_8",
+            "bits": 64,
+            "count": 10,
+            "arch_string_raw": "arm64",
+            "brand_raw": "Apple M1 Pro"
+        }
+    },
+    "commit_info": {
+        "id": "unknown",
+        "time": null,
+        "author_time": null,
+        "dirty": false,
+        "error": "CalledProcessError(128, \"fatal: bad revision 'HEAD'\\n\")",
+        "project": "trx_benchmarks",
+        "branch": "(unknown)"
+    },
+    "benchmarks": [
+        {
+            "group": "write raw",
+            "name": "test_write[1000000-numpy]",
+            "fullname": "test_raw_io.py::test_write[1000000-numpy]",
+            "params": {
+                "n": 1000000,
+                "filetype": "numpy"
+            },
+            "param": "1000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004204707918688655,
+                "max": 0.09043454099446535,
+                "mean": 0.008104500975101613,
+                "stddev": 0.008771136318667203,
+                "rounds": 130,
+                "median": 0.004655229509808123,
+                "iqr": 0.005201541935093701,
+                "q1": 0.0045524160377681255,
+                "q3": 0.009753957972861826,
+                "iqr_outliers": 6,
+                "stddev_outliers": 7,
+                "outliers": "7;6",
+                "ld15iqr": 0.004204707918688655,
+                "hd15iqr": 0.01921425003092736,
+                "ops": 123.38822625503629,
+                "total": 1.0535851267632097,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[1000000-parquet]",
+            "fullname": "test_raw_io.py::test_write[1000000-parquet]",
+            "params": {
+                "n": 1000000,
+                "filetype": "parquet"
+            },
+            "param": "1000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.026340292068198323,
+                "max": 0.0389416249236092,
+                "mean": 0.02781777081134565,
+                "stddev": 0.002350285945407713,
+                "rounds": 34,
+                "median": 0.027086958521977067,
+                "iqr": 0.0008940419647842646,
+                "q1": 0.02686579094734043,
+                "q3": 0.027759832912124693,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.026340292068198323,
+                "hd15iqr": 0.03045370802283287,
+                "ops": 35.94824354481143,
+                "total": 0.945804207585752,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[1000000-arrow]",
+            "fullname": "test_raw_io.py::test_write[1000000-arrow]",
+            "params": {
+                "n": 1000000,
+                "filetype": "arrow"
+            },
+            "param": "1000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007247374975122511,
+                "max": 0.16658016690053046,
+                "mean": 0.010940692003350705,
+                "stddev": 0.017843092664588733,
+                "rounds": 120,
+                "median": 0.00795295852003619,
+                "iqr": 0.0006463334430009127,
+                "q1": 0.007595979492180049,
+                "q3": 0.008242312935180962,
+                "iqr_outliers": 17,
+                "stddev_outliers": 3,
+                "outliers": "3;17",
+                "ld15iqr": 0.007247374975122511,
+                "hd15iqr": 0.009276582975871861,
+                "ops": 91.40189667104596,
+                "total": 1.3128830404020846,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[1000000-feather]",
+            "fullname": "test_raw_io.py::test_write[1000000-feather]",
+            "params": {
+                "n": 1000000,
+                "filetype": "feather"
+            },
+            "param": "1000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00473712501116097,
+                "max": 0.005050209001637995,
+                "mean": 0.004851758386939764,
+                "stddev": 0.00012881520707630357,
+                "rounds": 5,
+                "median": 0.004842749913223088,
+                "iqr": 0.0001893654407467693,
+                "q1": 0.004739499534480274,
+                "q3": 0.004928864975227043,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.00473712501116097,
+                "hd15iqr": 0.005050209001637995,
+                "ops": 206.11084069888068,
+                "total": 0.02425879193469882,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[10000000-numpy]",
+            "fullname": "test_raw_io.py::test_write[10000000-numpy]",
+            "params": {
+                "n": 10000000,
+                "filetype": "numpy"
+            },
+            "param": "10000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.03856408398132771,
+                "max": 0.16260062507353723,
+                "mean": 0.07035775174153969,
+                "stddev": 0.039670336423823505,
+                "rounds": 26,
+                "median": 0.05414550006389618,
+                "iqr": 0.05077683401759714,
+                "q1": 0.04091812495607883,
+                "q3": 0.09169495897367597,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.03856408398132771,
+                "hd15iqr": 0.16260062507353723,
+                "ops": 14.213074966828328,
+                "total": 1.8293015452800319,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[10000000-parquet]",
+            "fullname": "test_raw_io.py::test_write[10000000-parquet]",
+            "params": {
+                "n": 10000000,
+                "filetype": "parquet"
+            },
+            "param": "10000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.2710555420489982,
+                "max": 0.29934370797127485,
+                "mean": 0.28367260019294915,
+                "stddev": 0.01233128185315535,
+                "rounds": 5,
+                "median": 0.27703066694084555,
+                "iqr": 0.020188104506814852,
+                "q1": 0.27530576050048694,
+                "q3": 0.2954938650073018,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.2710555420489982,
+                "hd15iqr": 0.29934370797127485,
+                "ops": 3.5251906575390692,
+                "total": 1.4183630009647459,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[10000000-arrow]",
+            "fullname": "test_raw_io.py::test_write[10000000-arrow]",
+            "params": {
+                "n": 10000000,
+                "filetype": "arrow"
+            },
+            "param": "10000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.07058499997947365,
+                "max": 0.19325179199222475,
+                "mean": 0.08502633044651399,
+                "stddev": 0.03076943113976157,
+                "rounds": 15,
+                "median": 0.07606474997010082,
+                "iqr": 0.008331979188369587,
+                "q1": 0.07275158326956443,
+                "q3": 0.08108356245793402,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.07058499997947365,
+                "hd15iqr": 0.09836029191501439,
+                "ops": 11.761062658455575,
+                "total": 1.2753949566977099,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[10000000-feather]",
+            "fullname": "test_raw_io.py::test_write[10000000-feather]",
+            "params": {
+                "n": 10000000,
+                "filetype": "feather"
+            },
+            "param": "10000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.042658750084228814,
+                "max": 0.20794424996711314,
+                "mean": 0.06635245496872813,
+                "stddev": 0.043543127005826,
+                "rounds": 25,
+                "median": 0.046123458072543144,
+                "iqr": 0.01506370841525495,
+                "q1": 0.043006479187170044,
+                "q3": 0.058070187602424994,
+                "iqr_outliers": 5,
+                "stddev_outliers": 4,
+                "outliers": "4;5",
+                "ld15iqr": 0.042658750084228814,
+                "hd15iqr": 0.10961024998687208,
+                "ops": 15.071032420297025,
+                "total": 1.6588113742182031,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[100000000-numpy]",
+            "fullname": "test_raw_io.py::test_write[100000000-numpy]",
+            "params": {
+                "n": 100000000,
+                "filetype": "numpy"
+            },
+            "param": "100000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.6004193749977276,
+                "max": 0.7530819579260424,
+                "mean": 0.6889631581725553,
+                "stddev": 0.06432478004750308,
+                "rounds": 5,
+                "median": 0.7096499999752268,
+                "iqr": 0.10661361424718052,
+                "q1": 0.6340050312282983,
+                "q3": 0.7406186454754788,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.6004193749977276,
+                "hd15iqr": 0.7530819579260424,
+                "ops": 1.4514564213454553,
+                "total": 3.4448157908627763,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[100000000-parquet]",
+            "fullname": "test_raw_io.py::test_write[100000000-parquet]",
+            "params": {
+                "n": 100000000,
+                "filetype": "parquet"
+            },
+            "param": "100000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.831272374955006,
+                "max": 2.8701355409575626,
+                "mean": 2.8574745999882,
+                "stddev": 0.015905727134714498,
+                "rounds": 5,
+                "median": 2.863093457999639,
+                "iqr": 0.02043625997612253,
+                "q1": 2.8485347192618065,
+                "q3": 2.868970979237929,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 2.831272374955006,
+                "hd15iqr": 2.8701355409575626,
+                "ops": 0.34995936621943363,
+                "total": 14.287372999940999,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[100000000-arrow]",
+            "fullname": "test_raw_io.py::test_write[100000000-arrow]",
+            "params": {
+                "n": 100000000,
+                "filetype": "arrow"
+            },
+            "param": "100000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.7943236670689657,
+                "max": 1.0230349170742556,
+                "mean": 0.9127733500208706,
+                "stddev": 0.09367277033696744,
+                "rounds": 5,
+                "median": 0.9302385830087587,
+                "iqr": 0.15532381224329583,
+                "q1": 0.8306090105033945,
+                "q3": 0.9859328227466904,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.7943236670689657,
+                "hd15iqr": 1.0230349170742556,
+                "ops": 1.0955622225135462,
+                "total": 4.563866750104353,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "write raw",
+            "name": "test_write[100000000-feather]",
+            "fullname": "test_raw_io.py::test_write[100000000-feather]",
+            "params": {
+                "n": 100000000,
+                "filetype": "feather"
+            },
+            "param": "100000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.565568209043704,
+                "max": 0.6671994579955935,
+                "mean": 0.6139212248148397,
+                "stddev": 0.0393345451166654,
+                "rounds": 5,
+                "median": 0.6251184160355479,
+                "iqr": 0.054588467959547415,
+                "q1": 0.5811967397748958,
+                "q3": 0.6357852077344432,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.565568209043704,
+                "hd15iqr": 0.6671994579955935,
+                "ops": 1.6288734768888349,
+                "total": 3.0696061240741983,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[1000000-numpy]",
+            "fullname": "test_raw_io.py::test_read[1000000-numpy]",
+            "params": {
+                "n": 1000000,
+                "filetype": "numpy"
+            },
+            "param": "1000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0019390410743653774,
+                "max": 0.002554540988057852,
+                "mean": 0.0019833353537629917,
+                "stddev": 5.585013047733214e-05,
+                "rounds": 269,
+                "median": 0.001973167061805725,
+                "iqr": 2.672872506082058e-05,
+                "q1": 0.0019617917423602194,
+                "q3": 0.00198852046742104,
+                "iqr_outliers": 12,
+                "stddev_outliers": 9,
+                "outliers": "9;12",
+                "ld15iqr": 0.0019390410743653774,
+                "hd15iqr": 0.002034334000200033,
+                "ops": 504.20116704050844,
+                "total": 0.5335172101622447,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[1000000-parquet]",
+            "fullname": "test_raw_io.py::test_read[1000000-parquet]",
+            "params": {
+                "n": 1000000,
+                "filetype": "parquet"
+            },
+            "param": "1000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0037031249376013875,
+                "max": 0.004671957925893366,
+                "mean": 0.00415740354598318,
+                "stddev": 0.00015802819927397127,
+                "rounds": 169,
+                "median": 0.004172832937911153,
+                "iqr": 0.0001551767927594483,
+                "q1": 0.004055281460750848,
+                "q3": 0.004210458253510296,
+                "iqr_outliers": 12,
+                "stddev_outliers": 45,
+                "outliers": "45;12",
+                "ld15iqr": 0.0038704589242115617,
+                "hd15iqr": 0.004464291036128998,
+                "ops": 240.53474456820166,
+                "total": 0.7026011992711574,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[1000000-arrow]",
+            "fullname": "test_raw_io.py::test_read[1000000-arrow]",
+            "params": {
+                "n": 1000000,
+                "filetype": "arrow"
+            },
+            "param": "1000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003241750062443316,
+                "max": 0.0037662499817088246,
+                "mean": 0.0034209740605740625,
+                "stddev": 7.299514596188861e-05,
+                "rounds": 254,
+                "median": 0.0034116460010409355,
+                "iqr": 9.04579646885395e-05,
+                "q1": 0.0033702499931678176,
+                "q3": 0.003460707957856357,
+                "iqr_outliers": 6,
+                "stddev_outliers": 70,
+                "outliers": "70;6",
+                "ld15iqr": 0.003241750062443316,
+                "hd15iqr": 0.0035989999305456877,
+                "ops": 292.31440586608636,
+                "total": 0.8689274113858119,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[1000000-feather]",
+            "fullname": "test_raw_io.py::test_read[1000000-feather]",
+            "params": {
+                "n": 1000000,
+                "filetype": "feather"
+            },
+            "param": "1000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004714583978056908,
+                "max": 0.006122249993495643,
+                "mean": 0.004807903444133245,
+                "stddev": 0.0001873432781053745,
+                "rounds": 82,
+                "median": 0.004766125464811921,
+                "iqr": 5.4709031246602535e-05,
+                "q1": 0.004747124970890582,
+                "q3": 0.004801834002137184,
+                "iqr_outliers": 9,
+                "stddev_outliers": 2,
+                "outliers": "2;9",
+                "ld15iqr": 0.004714583978056908,
+                "hd15iqr": 0.0048896659864112735,
+                "ops": 207.99086579416056,
+                "total": 0.39424808241892606,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[10000000-numpy]",
+            "fullname": "test_raw_io.py::test_read[10000000-numpy]",
+            "params": {
+                "n": 10000000,
+                "filetype": "numpy"
+            },
+            "param": "10000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.030101291020400822,
+                "max": 0.03461362503003329,
+                "mean": 0.030841326180460125,
+                "stddev": 0.0009746312153151583,
+                "rounds": 29,
+                "median": 0.030508207972161472,
+                "iqr": 0.0004762707103509456,
+                "q1": 0.030363125290023163,
+                "q3": 0.03083939600037411,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.030101291020400822,
+                "hd15iqr": 0.03226725000422448,
+                "ops": 32.424027233743324,
+                "total": 0.8943984592333436,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[10000000-parquet]",
+            "fullname": "test_raw_io.py::test_read[10000000-parquet]",
+            "params": {
+                "n": 10000000,
+                "filetype": "parquet"
+            },
+            "param": "10000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.026149332989007235,
+                "max": 0.028313999995589256,
+                "mean": 0.027293534052592737,
+                "stddev": 0.0005194319103922897,
+                "rounds": 27,
+                "median": 0.02737999998498708,
+                "iqr": 0.0006534687126986682,
+                "q1": 0.02700387529330328,
+                "q3": 0.02765734400600195,
+                "iqr_outliers": 0,
+                "stddev_outliers": 10,
+                "outliers": "10;0",
+                "ld15iqr": 0.026149332989007235,
+                "hd15iqr": 0.028313999995589256,
+                "ops": 36.638714432255995,
+                "total": 0.7369254194200039,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[10000000-arrow]",
+            "fullname": "test_raw_io.py::test_read[10000000-arrow]",
+            "params": {
+                "n": 10000000,
+                "filetype": "arrow"
+            },
+            "param": "10000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.033478458994068205,
+                "max": 0.035439042025245726,
+                "mean": 0.03450209045670284,
+                "stddev": 0.0005357863799864354,
+                "rounds": 29,
+                "median": 0.03438937501050532,
+                "iqr": 0.0009230829600710422,
+                "q1": 0.03410862505552359,
+                "q3": 0.03503170801559463,
+                "iqr_outliers": 0,
+                "stddev_outliers": 11,
+                "outliers": "11;0",
+                "ld15iqr": 0.033478458994068205,
+                "hd15iqr": 0.035439042025245726,
+                "ops": 28.983751035460127,
+                "total": 1.0005606232443824,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[10000000-feather]",
+            "fullname": "test_raw_io.py::test_read[10000000-feather]",
+            "params": {
+                "n": 10000000,
+                "filetype": "feather"
+            },
+            "param": "10000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.050912750069983304,
+                "max": 0.05428062495775521,
+                "mean": 0.052135865053381115,
+                "stddev": 0.0007175115275314514,
+                "rounds": 17,
+                "median": 0.0520004159770906,
+                "iqr": 0.0005338431510608643,
+                "q1": 0.051743750052992254,
+                "q3": 0.05227759320405312,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.05165349994786084,
+                "hd15iqr": 0.0531117080245167,
+                "ops": 19.180654219050847,
+                "total": 0.8863097059074789,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[100000000-numpy]",
+            "fullname": "test_raw_io.py::test_read[100000000-numpy]",
+            "params": {
+                "n": 100000000,
+                "filetype": "numpy"
+            },
+            "param": "100000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.33287791698239744,
+                "max": 0.34424437501002103,
+                "mean": 0.33603843320161103,
+                "stddev": 0.004674300824906664,
+                "rounds": 5,
+                "median": 0.3344835409661755,
+                "iqr": 0.00416655172011815,
+                "q1": 0.3332768855325412,
+                "q3": 0.33744343725265935,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.33287791698239744,
+                "hd15iqr": 0.34424437501002103,
+                "ops": 2.9758500849813085,
+                "total": 1.6801921660080552,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[100000000-parquet]",
+            "fullname": "test_raw_io.py::test_read[100000000-parquet]",
+            "params": {
+                "n": 100000000,
+                "filetype": "parquet"
+            },
+            "param": "100000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.25761562504339963,
+                "max": 0.2633209580089897,
+                "mean": 0.26016490838956086,
+                "stddev": 0.0024681023615178528,
+                "rounds": 5,
+                "median": 0.2597807089332491,
+                "iqr": 0.0043760833505075425,
+                "q1": 0.2579692499421071,
+                "q3": 0.26234533329261467,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.25761562504339963,
+                "hd15iqr": 0.2633209580089897,
+                "ops": 3.843715919222429,
+                "total": 1.3008245419478044,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[100000000-arrow]",
+            "fullname": "test_raw_io.py::test_read[100000000-arrow]",
+            "params": {
+                "n": 100000000,
+                "filetype": "arrow"
+            },
+            "param": "100000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.3515605840366334,
+                "max": 0.35643195908050984,
+                "mean": 0.3534984586527571,
+                "stddev": 0.0022765462555041456,
+                "rounds": 5,
+                "median": 0.35235937510151416,
+                "iqr": 0.004036500467918813,
+                "q1": 0.35165845829760656,
+                "q3": 0.35569495876552537,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.3515605840366334,
+                "hd15iqr": 0.35643195908050984,
+                "ops": 2.8288666485595737,
+                "total": 1.7674922932637855,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read raw",
+            "name": "test_read[100000000-feather]",
+            "fullname": "test_raw_io.py::test_read[100000000-feather]",
+            "params": {
+                "n": 100000000,
+                "filetype": "feather"
+            },
+            "param": "100000000-feather",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.5133213750086725,
+                "max": 0.5359972080914304,
+                "mean": 0.5190859166206792,
+                "stddev": 0.009523848845712505,
+                "rounds": 5,
+                "median": 0.5150452500674874,
+                "iqr": 0.0071756453544367105,
+                "q1": 0.5142266564362217,
+                "q3": 0.5214023017906584,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.5133213750086725,
+                "hd15iqr": 0.5359972080914304,
+                "ops": 1.9264633618074976,
+                "total": 2.595429583103396,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[1000000-numpy]",
+            "fullname": "test_raw_mmap.py::test_mmap[1000000-numpy]",
+            "params": {
+                "n": 1000000,
+                "filetype": "numpy"
+            },
+            "param": "1000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003914666944183409,
+                "max": 0.011336833005771041,
+                "mean": 0.005255592730167117,
+                "stddev": 0.0011408843305003124,
+                "rounds": 141,
+                "median": 0.004998916061595082,
+                "iqr": 0.00031034351559355855,
+                "q1": 0.004912396252620965,
+                "q3": 0.005222739768214524,
+                "iqr_outliers": 33,
+                "stddev_outliers": 18,
+                "outliers": "18;33",
+                "ld15iqr": 0.004637666046619415,
+                "hd15iqr": 0.005695833009667695,
+                "ops": 190.2734955583596,
+                "total": 0.7410385749535635,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[1000000-parquet]",
+            "fullname": "test_raw_mmap.py::test_mmap[1000000-parquet]",
+            "params": {
+                "n": 1000000,
+                "filetype": "parquet"
+            },
+            "param": "1000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017574169905856252,
+                "max": 0.0021491249790415168,
+                "mean": 0.0019010477784884195,
+                "stddev": 6.506607861785528e-05,
+                "rounds": 313,
+                "median": 0.001897374982945621,
+                "iqr": 8.606229675933719e-05,
+                "q1": 0.0018507499480620027,
+                "q3": 0.0019368122448213398,
+                "iqr_outliers": 6,
+                "stddev_outliers": 100,
+                "outliers": "100;6",
+                "ld15iqr": 0.0017574169905856252,
+                "hd15iqr": 0.002066790941171348,
+                "ops": 526.0257060951567,
+                "total": 0.5950279546668753,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[1000000-arrow]",
+            "fullname": "test_raw_mmap.py::test_mmap[1000000-arrow]",
+            "params": {
+                "n": 1000000,
+                "filetype": "arrow"
+            },
+            "param": "1000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.6999972760677338e-05,
+                "max": 0.00011300004553049803,
+                "mean": 2.7834950961080435e-05,
+                "stddev": 1.8350093885330334e-06,
+                "rounds": 6792,
+                "median": 2.7582980692386627e-05,
+                "iqr": 3.7602148950099945e-07,
+                "q1": 2.7415924705564976e-05,
+                "q3": 2.7791946195065975e-05,
+                "iqr_outliers": 405,
+                "stddev_outliers": 224,
+                "outliers": "224;405",
+                "ld15iqr": 2.6999972760677338e-05,
+                "hd15iqr": 2.8374954126775265e-05,
+                "ops": 35926.05574905544,
+                "total": 0.18905498692765832,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[100000000-numpy]",
+            "fullname": "test_raw_mmap.py::test_mmap[100000000-numpy]",
+            "params": {
+                "n": 100000000,
+                "filetype": "numpy"
+            },
+            "param": "100000000-numpy",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003945834003388882,
+                "max": 0.0239126660162583,
+                "mean": 0.005925678581531558,
+                "stddev": 0.00520147595719366,
+                "rounds": 14,
+                "median": 0.004887729533948004,
+                "iqr": 0.0010596669744700193,
+                "q1": 0.004009917029179633,
+                "q3": 0.005069584003649652,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.003945834003388882,
+                "hd15iqr": 0.0239126660162583,
+                "ops": 168.7570438121095,
+                "total": 0.08295950014144182,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[100000000-parquet]",
+            "fullname": "test_raw_mmap.py::test_mmap[100000000-parquet]",
+            "params": {
+                "n": 100000000,
+                "filetype": "parquet"
+            },
+            "param": "100000000-parquet",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.109245500061661,
+                "max": 0.12373245798517019,
+                "mean": 0.1189692037878558,
+                "stddev": 0.005110925388742953,
+                "rounds": 9,
+                "median": 0.12152825004886836,
+                "iqr": 0.007397053035674617,
+                "q1": 0.11516570771345869,
+                "q3": 0.1225627607491333,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.109245500061661,
+                "hd15iqr": 0.12373245798517019,
+                "ops": 8.405536627640089,
+                "total": 1.0707228340907022,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "mmap raw",
+            "name": "test_mmap[100000000-arrow]",
+            "fullname": "test_raw_mmap.py::test_mmap[100000000-arrow]",
+            "params": {
+                "n": 100000000,
+                "filetype": "arrow"
+            },
+            "param": "100000000-arrow",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.4958007745444775e-05,
+                "max": 6.487499922513962e-05,
+                "mean": 3.6049571144386295e-05,
+                "stddev": 1.5471122469321432e-06,
+                "rounds": 5622,
+                "median": 3.570900298655033e-05,
+                "iqr": 7.08969309926033e-07,
+                "q1": 3.5415985621511936e-05,
+                "q3": 3.612495493143797e-05,
+                "iqr_outliers": 376,
+                "stddev_outliers": 277,
+                "outliers": "277;376",
+                "ld15iqr": 3.4958007745444775e-05,
+                "hd15iqr": 3.7207966670393944e-05,
+                "ops": 27739.58103398192,
+                "total": 0.20267068897373974,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read trx",
+            "name": "test_read[f32_ui32_wo_metadata.trx-trxfile]",
+            "fullname": "test_trx_io.py::test_read[f32_ui32_wo_metadata.trx-trxfile]",
+            "params": {
+                "src": "f32_ui32_wo_metadata.trx",
+                "filetype": "trxfile"
+            },
+            "param": "f32_ui32_wo_metadata.trx-trxfile",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.5150787079473957,
+                "max": 0.5330099170096219,
+                "mean": 0.5216356251854449,
+                "stddev": 0.007389875323261202,
+                "rounds": 5,
+                "median": 0.5180043749278411,
+                "iqr": 0.010500020725885406,
+                "q1": 0.5165429900225718,
+                "q3": 0.5270430107484572,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.5150787079473957,
+                "hd15iqr": 0.5330099170096219,
+                "ops": 1.9170469801492054,
+                "total": 2.6081781259272248,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read trx",
+            "name": "test_read[f32_ui32_wo_metadata.trx-trxparquet_dir]",
+            "fullname": "test_trx_io.py::test_read[f32_ui32_wo_metadata.trx-trxparquet_dir]",
+            "params": {
+                "src": "f32_ui32_wo_metadata.trx",
+                "filetype": "trxparquet_dir"
+            },
+            "param": "f32_ui32_wo_metadata.trx-trxparquet_dir",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.14797470800112933,
+                "max": 0.14995691599324346,
+                "mean": 0.1488737914012745,
+                "stddev": 0.0007254789033968457,
+                "rounds": 5,
+                "median": 0.14880149997770786,
+                "iqr": 0.0008509897452313453,
+                "q1": 0.14842939551454037,
+                "q3": 0.14928038525977172,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.14797470800112933,
+                "hd15iqr": 0.14995691599324346,
+                "ops": 6.717099031249895,
+                "total": 0.7443689570063725,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read trx",
+            "name": "test_read[f32_ui32_wo_metadata.trx-trxparquet_tbl]",
+            "fullname": "test_trx_io.py::test_read[f32_ui32_wo_metadata.trx-trxparquet_tbl]",
+            "params": {
+                "src": "f32_ui32_wo_metadata.trx",
+                "filetype": "trxparquet_tbl"
+            },
+            "param": "f32_ui32_wo_metadata.trx-trxparquet_tbl",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.3988120419671759,
+                "max": 0.4646447079721838,
+                "mean": 0.4139615583932027,
+                "stddev": 0.028493292075834748,
+                "rounds": 5,
+                "median": 0.4002618750091642,
+                "iqr": 0.021560291206697002,
+                "q1": 0.3994353857706301,
+                "q3": 0.4209956769773271,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.3988120419671759,
+                "hd15iqr": 0.4646447079721838,
+                "ops": 2.4156832433463467,
+                "total": 2.0698077919660136,
+                "iterations": 1
+            }
+        },
+        {
+            "group": "read trx",
+            "name": "test_read[f32_ui32_wo_metadata.trx-trxparquet_zip]",
+            "fullname": "test_trx_io.py::test_read[f32_ui32_wo_metadata.trx-trxparquet_zip]",
+            "params": {
+                "src": "f32_ui32_wo_metadata.trx",
+                "filetype": "trxparquet_zip"
+            },
+            "param": "f32_ui32_wo_metadata.trx-trxparquet_zip",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.7288080420112237,
+                "max": 1.7726536670234054,
+                "mean": 1.7406990668037907,
+                "stddev": 0.018165744117008966,
+                "rounds": 5,
+                "median": 1.7353880000300705,
+                "iqr": 0.015758874971652403,
+                "q1": 1.7297953855013475,
+                "q3": 1.7455542604729999,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 1.7288080420112237,
+                "hd15iqr": 1.7726536670234054,
+                "ops": 0.5744818384008008,
+                "total": 8.703495334018953,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2024-05-05T22:05:51.640186",
+    "version": "4.0.0"
+}
